@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    /* --veryDarkBlue: hsl(212, 21%, 14%); */ /*color from style guide doesn't match the one used in the design*/
+    --veryDarkBlue: hsl(156, 42%, 18%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(208, 21%, 12%); /*text color - not mentioned in the style guilde*/
+}
+
+::selection {
+    background: var(--cream);
+}
+
+::-moz-selection {
+    background: var(--cream);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cream);
+    color: var(--veryDarkBlue);
+    font-family: 'Montserrat', sans-serif;
+    padding: 16px;
+}
+
+main {
+    margin: auto;
+    margin-bottom: 0;
+    width: min(100%, 350px);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--black);
+    font-weight: 500;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    padding: 1.3rem;
+}
+
+.top-image {
+    border-radius: 10px 10px 0 0;
+}
+
+h1,
+.current-price {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+}
+
+h1 {
+    margin-top: .6rem;
+}
+
+.cat,
+p,
+.old-price {
+    color: var(--darkGrayishBlue);
+    font-size: .8rem;
+}
+
+.cat {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 1.55;
+}
+
+.price {
+    margin-top: 2.5rem;
+}
+
+.current-price {
+    color: var(--darkCyan);
+    margin-right: 1.5rem;
+}
+
+.old-price {
+    vertical-align: top;
+    position: relative;
+    top: 9px;
+    text-decoration: line-through;
+}
+
+.btn {
+    display: block;
+    padding: .8rem 0;
+    background-color: var(--darkCyan);
+    text-align: center;
+    color: var(--white);
+    margin-top: 1rem;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: background-color .1s;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: var(--veryDarkBlue);
+}
+
+.btn:before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 16px;
+    margin-right: .8rem;
+    position: relative;
+    top: 2px;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z' fill='%23FFF'/%3E%3C/svg%3E");
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 16px;
+    margin-top: 12px;
+    margin-bottom: auto;
+}
+
+.attribution a {
+    color: var(--darkCyan);
+}
+.attribution a:hover,
+.attribution a:active,
+.attribution a:focus {
+    color: var(--veryDarkBlue);
+}
+
+@media (min-width: 700px) {
+    main {
+        flex-direction: row;
+        width: min(100%, 600px);
+        align-items: center;
+    }
+
+    .top-image {
+        border-radius: 10px 0 0 10px;
+        height: 100%;
+        flex: 0 0 50%;
+    }
+
+    .container {
+        flex: 0 0 50%;
+        padding: 1.3rem 1.8rem;
+    }
+
+    h1 {
+        line-height: 1;
+        font-size: 1.95rem;
+        margin-top: 1rem;
+    }
+
+    p {
+        font-size: .93rem;
+    }
+}
