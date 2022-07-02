@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-[Live Site](https://your-live-site-url.com)
+[Live Site](https://meelix.github.io/product-preview-card-component/)
 
 ## My process
 
